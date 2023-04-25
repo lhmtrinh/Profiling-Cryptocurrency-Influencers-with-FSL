@@ -13,20 +13,17 @@ class InfluencerProfiler(nn.Module):
         self.softmax = nn.Softmax(dim=1)
         self.relu = nn.ReLU()
   
-    def forward(self, input_ids, attention_mask, features):
+    def forward(self, input_ids, attention_mask):
         output = self.pretrained(
           input_ids=input_ids,
           attention_mask=attention_mask
         )
         # Get the first element of output which is the hidden state
         # Get the embeddings of CLS token
-        cls_embeddings = output[0][:,-1,:]
-        
-        # Add features along with cls embeddings
-        output = torch.concat([cls_embeddings,features], dim=1)
+        cls_embeddings = output[0][:,0,:]
 
         # Layer 1
-        output = self.drop(output)
+        output = self.drop(cls_embeddings)
         output = self.fc1(output)
         output = self.relu(output)
         

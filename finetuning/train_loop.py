@@ -1,4 +1,3 @@
-from tqdm import tqdm
 import torch.nn as nn
 import torch
 import numpy as np
@@ -32,16 +31,14 @@ def train_epoch(model, train_data_loader, n_train_examples, val_data_loader, n_v
   train_loss = []
   train_correct_predictions = 0
   
-  for i,d in enumerate(tqdm(train_data_loader)):
+  for i,d in enumerate(train_data_loader):
     input_ids = d["input_ids"].to(device)
     attention_mask = d["attention_mask"].to(device)
-    targets = d["score"].to(device)
-    features = d["features"].to(device)
+    targets = d["label"].to(device)
 
     outputs = model(
       input_ids = input_ids,
       attention_mask = attention_mask,
-      features = features
     )
 
     loss = loss_fn(outputs, targets)
@@ -61,16 +58,14 @@ def train_epoch(model, train_data_loader, n_train_examples, val_data_loader, n_v
 
   with torch.no_grad():
     model.eval()
-    for i, d in enumerate(tqdm(val_data_loader)):
+    for i, d in enumerate(val_data_loader):
       input_ids = d["input_ids"].to(device)
       attention_mask = d["attention_mask"].to(device)
-      targets = d["score"].to(device)
-      features = d["features"].to(device)
+      targets = d["label"].to(device)
 
       outputs = model(
         input_ids = input_ids,
-        attention_mask = attention_mask,
-        features = features
+        attention_mask = attention_mask
       )
 
       loss = loss_fn(outputs, targets)
