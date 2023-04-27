@@ -1,16 +1,16 @@
 # %%
 from influencer_profiler import InfluencerProfiler, save_model
 from dataloader import create_data_loader
+# from dataloader_v2 import create_data_loader
 from train_loop import train_loop
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup
+
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from torch import optim
 import torch.nn as nn
 import torch
 
-RANDOM_SEED = 20
-
+# %%
 MODELS = ['charlieoneill/distilbert-base-uncased-finetuned-tweet_eval-offensive', 
          'pig4431/TweetEval_roBERTa_5E', 
          'tner/twitter-roberta-base-dec2021-tweetner7-random',
@@ -20,11 +20,10 @@ MODELS = ['charlieoneill/distilbert-base-uncased-finetuned-tweet_eval-offensive'
 
 # too large 'tner/bertweet-large-tweetner7-all',
 
-EPOCHS = 3
+EPOCHS = 4
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# %%
 def translate_class_column(df):
     class_map = {
         "no influencer": 0,
@@ -42,11 +41,9 @@ def translate_class_column(df):
     
     return df
 
-df = pd.read_csv('../data/preprocessed_data.csv')
-df = translate_class_column(df)
-
-df_train_val, df_test = train_test_split(df, test_size=100, random_state=RANDOM_SEED)
-df_train, df_val = train_test_split(df_train_val, test_size=100, random_state=RANDOM_SEED)
+df_train = translate_class_column(pd.read_csv('../data/finetune_train_val_test/train.csv'))
+df_val = translate_class_column(pd.read_csv('../data/finetune_train_val_test/validate.csv'))
+df_test = translate_class_column(pd.read_csv('../data/finetune_train_val_test/test.csv'))
 
 # %%
 for model_name in MODELS:    
@@ -55,9 +52,9 @@ for model_name in MODELS:
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     # Create data loader
-    train_data_loader = create_data_loader(df_train, tokenizer, 300, 8)
-    val_data_loader = create_data_loader(df_val, tokenizer, 300, 8)
-    test_data_loader = create_data_loader(df_test, tokenizer, 300, 8)
+    train_data_loader = create_data_loader(df_train, tokenizer, 512, 4)
+    val_data_loader = create_data_loader(df_val, tokenizer, 512, 4)
+    test_data_loader = create_data_loader(df_test, tokenizer, 512, 4)
 
     # Create model
     model = InfluencerProfiler(model= model_name, n_classes=5).to(device)
@@ -76,7 +73,7 @@ for model_name in MODELS:
     loss_fn = nn.CrossEntropyLoss().to(device)
 
     # Train model
-    model = train_loop(EPOCHS, train_data_loader, df_train, val_data_loader, df_val, model, loss_fn, optimizer, device, scheduler)
+    model = train_loop(EPOCHS, train_data_loader, val_data_loader, model, loss_fn, optimizer, device, scheduler)
 
     # Export model
     save_as = model_name.split('/', 1)[1]
@@ -86,3 +83,5 @@ for model_name in MODELS:
     del(model)
     torch.cuda.empty_cache()
     print()
+
+
