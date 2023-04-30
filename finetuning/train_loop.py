@@ -3,7 +3,7 @@ import torch
 import numpy as np
 
 
-def train_loop(epochs,train_data_loader, df_train, val_data_loader, df_val, model, loss_fn, optimizer, device, scheduler):
+def train_loop(epochs,train_data_loader, val_data_loader, model, loss_fn, optimizer, device, scheduler):
   for epoch in range(epochs):
     print(f'Epoch {epoch + 1}/{epochs}')
     print('-' * 10)
@@ -11,9 +11,9 @@ def train_loop(epochs,train_data_loader, df_train, val_data_loader, df_val, mode
     train_acc, train_loss, val_acc, val_loss = train_epoch(
         model,
         train_data_loader,
-        len(df_train),
+        len(train_data_loader.dataset),
         val_data_loader,
-        len(df_val),
+        len(val_data_loader.dataset),
         loss_fn, 
         optimizer, 
         device, 

@@ -1,0 +1,4 @@
+# pycache file
+*.pyc
+# saved models
+*.pth
