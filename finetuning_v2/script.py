@@ -1,7 +1,7 @@
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import TrainingArguments, Trainer
-from compute_metrics import compute_metrics, PrintMetricsCallback
+from compute_metrics import compute_metrics
 from TweetDataset import TweetDataset
 from transformers import EarlyStoppingCallback
 
@@ -13,7 +13,7 @@ MODELS = [  'roberta-large',
         ]
 
 batch_size = 4
-EPOCHS = 1
+EPOCHS = 50
 
 train_df = pd.read_csv('../data/finetune_train_val_test/train.csv')
 validate_df = pd.read_csv('../data/finetune_train_val_test/validate.csv')
@@ -67,5 +67,3 @@ for model_name in MODELS:
     trainer.save_model(model_name)
     print()
     del(model)
-
-
