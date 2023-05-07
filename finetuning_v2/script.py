@@ -5,12 +5,13 @@ from compute_metrics import compute_metrics
 from TweetDataset import TweetDataset
 from transformers import EarlyStoppingCallback
 
-MODELS = [  'roberta-large',
-            'google/electra-large-discriminator',
-            'tner/roberta-large-tweetner7-all',
-            'tner/bertweet-large-tweetner7-all',
-            'cardiffnlp/twitter-roberta-large-2022-154m',
-        ]
+# MODELS = [  'roberta-large',
+#             'google/electra-large-discriminator',
+#             'tner/roberta-large-tweetner7-all',
+#             'tner/bertweet-large-tweetner7-all',
+#             'cardiffnlp/twitter-roberta-large-2022-154m',
+        # ]
+MODELS = ['cardiffnlp/twitter-roberta-large-2022-154m']
 
 batch_size = 4
 EPOCHS = 50
@@ -35,7 +36,7 @@ for model_name in MODELS:
     train_steps_per_epoch = len(train_dataset) // batch_size
 
     training_arguments = TrainingArguments(
-        output_dir=f'./results/{model_name}',
+        output_dir=f'./results_v2/{model_name}',
         evaluation_strategy = "epoch",
         save_strategy = "epoch",
         learning_rate=2e-5,
