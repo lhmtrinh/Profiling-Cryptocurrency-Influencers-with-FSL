@@ -1,19 +1,22 @@
 import pandas as pd
 
-# for prompt template 1- pass only the tweet row
-def prompt_template_1_train(tweet_data, label):
+# for prompt template 1- pass the entire dataframe
+def prompt_template_1_train(tweet_data, labels):
   '''
   Template: Given a set of user tweets [x1],[x2],[x3],[x4],[x5],
   the user profile is labelled as [z].
   '''
-  text = "Given a set of user tweets-"
-  for tweets in tweet_data:
-    no = 1
+  prompt_true = []
+  prompt_mask = []
+  for tweets, label in zip(tweet_data,labels):
+    text = "Given a set of user tweets-"
     for tweet in tweets:
       text+=", "+str(tweet)+" "
-      no+=1
-  text+=",-the user profile is labelled as "+label
-  return text
+    prompt_true_sub = text+",-the user profile is labelled as "+label
+    prompt_mask_sub = text+",-the user profile is labelled as [MASK]"
+    prompt_true.append(prompt_true_sub)
+    prompt_mask.append(prompt_mask_sub)
+  return prompt_true, prompt_mask
 
 # Masked labels for testing
 def prompt_template_1_test(tweet_data):
@@ -21,12 +24,10 @@ def prompt_template_1_test(tweet_data):
   Template: Given a set of user tweets [x1],[x2],[x3],[x4],[x5],
   the user profile is labelled as [z].
   '''
-  text = "Given a set of user tweets-"
-  no = 1
   for tweet in tweet_data:
+    text = "Given a set of user tweets-"
     text+=", "+str(tweet)+" "
-    no+=1
-  text+=",-the user profile is labelled as [MASK]"
+  text+=",-the user profile is labelled as [MASK]."
   return text
 
 # for prompt template 2- pass the whole dataframe (Binary Prompt)
@@ -43,12 +44,10 @@ def prompt_template_2(text_dataframe, labels):
   binary_labels = []
   for tweets, label in zip(text_dataframe, labels):
     tweet_text = "Given a set of user tweets-"
-    no = 1
     for tweet in tweets:
       tweet_text+=", "+str(tweet)+" "
-      no+=1
     positive_text = tweet_text+",-the user profile is labelled as "+label
-    positive_label = True
+    positive_label = 0
     text.append(positive_text)
     binary_labels.append(positive_label)
 
@@ -56,6 +55,6 @@ def prompt_template_2(text_dataframe, labels):
       if neg_label!=label:
         negative_text = tweet_text+",-the user profile is labelled as "+neg_label
         text.append(negative_text)
-        binary_labels.append(False)
+        binary_labels.append(1)
   
   return text, binary_labels
