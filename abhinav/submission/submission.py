@@ -59,7 +59,7 @@ def preprocess_tweet(tweet):
 
 def load_test_dataset():
     text_df = pd.read_json(
-        "/mnt/home/abhinavkumar2/Profiling-Cryptocurrency-Influencers-with-FSL/raw_data/test_text/subtask1/test_text.json",
+        "/home/ubuntu/Profiling-Cryptocurrency-Influencers-with-FSL/abhinav/submission/test_text.json",
         lines=True)
     text_df = text_df.drop(columns=['tweet ids'])
     expanded_rows = []
@@ -128,9 +128,6 @@ class TwoBodyModel(nn.Module):
         output = self.dropout_3(F.gelu(output))
         logits = self.classifier_2(output)
 
-        # loss_fct = nn.CrossEntropyLoss()
-        # loss = loss_fct(logits.view(-1, self.num_labels), labels)
-
         return logits
 
 
@@ -165,10 +162,10 @@ class TweetDataset(torch.utils.data.Dataset):
         }
 
 
-def eval_model(model, data_loader_1, data_loader_2, device):  # , n_examples):
-
+def eval_model(model, data_loader_1, data_loader_2, device):
     result = []
     with torch.no_grad():
+        softmax = nn.Softmax(dim=1)
         for i, d in enumerate(zip(data_loader_1, data_loader_2)):
             d_1, d_2 = d[0], d[1]
             input_ids_1 = d_1["input_ids"].reshape(
@@ -182,11 +179,14 @@ def eval_model(model, data_loader_1, data_loader_2, device):  # , n_examples):
 
             outputs = model(input_ids_1=input_ids_1, input_ids_2=input_ids_2,
                             attention_mask_1=attention_mask_1, attention_mask_2=attention_mask_2)
+            
             _, prediction = torch.max(outputs, dim=1)
+            probability,_ = torch.max(softmax(outputs), dim=1)
             prediction = prediction.flatten()
+            probability = probability.flatten()
             prediction_label = [id2label[p.item()] for p in prediction]
-            for user, pred in zip(users, prediction_label):
-                result.append((user, pred))
+            for user, pred, prob in zip(users, prediction_label, probability.tolist()):
+                result.append((user, pred, prob))
     return result
 
 
@@ -196,7 +196,7 @@ def main():
 
     # load model
     model = load_model(TwoBodyModel, "cardiffnlp/twitter-roberta-large-2022-154m", "Twitter/twhin-bert-base", 5,
-                       "/mnt/home/abhinavkumar2/Profiling-Cryptocurrency-Influencers-with-FSL/abhinav/submission/model_epoch_20.pth")
+                       "/home/ubuntu/Profiling-Cryptocurrency-Influencers-with-FSL/abhinav/submission/model_epoch_20.pth")
 
     # load data
     test_df = load_test_dataset()
@@ -209,7 +209,7 @@ def main():
 
     # predict
     result = eval_model(model, test_data_loader_1, test_data_loader_2, device)
-    result_df = pd.DataFrame(result, columns=['twitter user id', 'class'])
+    result_df = pd.DataFrame(result, columns=['twitter user id', 'class', 'probability'])
     result_df.to_json(os.path.join('predictions.json'), orient='records')
 
 
