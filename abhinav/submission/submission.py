@@ -11,6 +11,7 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import AutoModel, AutoTokenizer
+import json
 
 model_name_1 = "cardiffnlp/twitter-roberta-large-2022-154m"
 model_name_2 = 'Twitter/twhin-bert-base'
@@ -73,15 +74,7 @@ def load_test_dataset():
     # Apply the preprocessing function to the 'tweet' column
     df['texts'], df['count_mention'], df['count_link'] = zip(
         *df['texts'].apply(preprocess_tweet))
-
-    def count_words(text):
-        return len(text.split())
-    # Count the number of words in each row of the specified column
-    df['word_count'] = df['texts'].apply(count_words)
-    # Remove rows with less than 5 words in the specified column
-    df = df[df['word_count'] >= 5]
-    # Drop the 'word_count' column as it's no longer needed
-    df = df.drop(columns=['word_count'])
+    
     df = df.groupby('twitter user id').agg(
         {'texts': ' '.join, 'count_mention': sum}).reset_index()
 
@@ -210,7 +203,11 @@ def main():
     # predict
     result = eval_model(model, test_data_loader_1, test_data_loader_2, device)
     result_df = pd.DataFrame(result, columns=['twitter user id', 'class', 'probability'])
-    result_df.to_json(os.path.join('predictions.json'), orient='records')
+
+    with open('predictions.json', 'w') as f:
+        for record in result_df.to_dict(orient='records'):
+            f.write(json.dumps(record))
+            f.write('\n')
 
 
 if __name__ == '__main__':
