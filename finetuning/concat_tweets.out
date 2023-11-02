@@ -1,167 +1,0 @@
-Some weights of the model checkpoint at charlieoneill/distilbert-base-uncased-finetuned-tweet_eval-offensive were not used when initializing DistilBertModel: ['classifier.weight', 'pre_classifier.weight', 'classifier.bias', 'pre_classifier.bias']
-- This IS expected if you are initializing DistilBertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing DistilBertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Training charlieoneill/distilbert-base-uncased-finetuned-tweet_eval-offensive
-Epoch 1/4
-----------
-Train loss 1.6071011366382721 accuracy 0.23140495867768596
-Val loss   1.6090505421161652 accuracy 0.13333333333333333
-
-Epoch 2/4
-----------
-Train loss 1.6035747297348515 accuracy 0.18181818181818182
-Val loss   1.6065260469913483 accuracy 0.13333333333333333
-
-Epoch 3/4
-----------
-Train loss 1.5989018255664456 accuracy 0.25619834710743805
-Val loss   1.6062935590744019 accuracy 0.13333333333333333
-
-Epoch 4/4
-----------
-Train loss 1.5995508470842916 accuracy 0.2975206611570248
-Val loss   1.6058073937892914 accuracy 0.13333333333333333
-
-Model saved to distilbert-base-uncased-finetuned-tweet_eval-offensive.pth
-
-Training pig4431/TweetEval_roBERTa_5E
-Downloading (…)okenizer_config.json:   0%|          | 0.00/427 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 427/427 [00:00<00:00, 290kB/s]
-Downloading (…)olve/main/vocab.json:   0%|          | 0.00/798k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.92MB/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.91MB/s]
-Downloading (…)olve/main/merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.68MB/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.68MB/s]
-Downloading (…)/main/tokenizer.json:   0%|          | 0.00/2.11M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 2.11M/2.11M [00:00<00:00, 4.66MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 2.11M/2.11M [00:00<00:00, 4.64MB/s]
-Downloading (…)cial_tokens_map.json:   0%|          | 0.00/280 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 280/280 [00:00<00:00, 80.6kB/s]
-Downloading (…)lve/main/config.json:   0%|          | 0.00/735 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 735/735 [00:00<00:00, 304kB/s]
-Downloading pytorch_model.bin:   0%|          | 0.00/499M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 10.5M/499M [00:00<00:38, 12.7MB/s]Downloading pytorch_model.bin:   4%|▍         | 21.0M/499M [00:01<00:20, 22.9MB/s]Downloading pytorch_model.bin:   6%|▋         | 31.5M/499M [00:01<00:16, 28.2MB/s]Downloading pytorch_model.bin:   8%|▊         | 41.9M/499M [00:01<00:14, 31.4MB/s]Downloading pytorch_model.bin:  11%|█         | 52.4M/499M [00:01<00:13, 33.5MB/s]Downloading pytorch_model.bin:  13%|█▎        | 62.9M/499M [00:02<00:11, 38.2MB/s]Downloading pytorch_model.bin:  15%|█▍        | 73.4M/499M [00:02<00:11, 38.2MB/s]Downloading pytorch_model.bin:  17%|█▋        | 83.9M/499M [00:02<00:10, 38.3MB/s]Downloading pytorch_model.bin:  19%|█▉        | 94.4M/499M [00:02<00:09, 41.9MB/s]Downloading pytorch_model.bin:  21%|██        | 105M/499M [00:03<00:09, 40.6MB/s] Downloading pytorch_model.bin:  23%|██▎       | 115M/499M [00:03<00:09, 39.9MB/s]Downloading pytorch_model.bin:  25%|██▌       | 126M/499M [00:03<00:09, 39.3MB/s]Downloading pytorch_model.bin:  27%|██▋       | 136M/499M [00:03<00:08, 42.1MB/s]Downloading pytorch_model.bin:  29%|██▉       | 147M/499M [00:04<00:08, 41.3MB/s]Downloading pytorch_model.bin:  32%|███▏      | 157M/499M [00:04<00:08, 40.2MB/s]Downloading pytorch_model.bin:  34%|███▎      | 168M/499M [00:04<00:07, 43.3MB/s]Downloading pytorch_model.bin:  36%|███▌      | 178M/499M [00:04<00:07, 41.7MB/s]Downloading pytorch_model.bin:  38%|███▊      | 189M/499M [00:05<00:07, 40.6MB/s]Downloading pytorch_model.bin:  40%|███▉      | 199M/499M [00:05<00:07, 39.8MB/s]Downloading pytorch_model.bin:  42%|████▏     | 210M/499M [00:05<00:06, 43.1MB/s]Downloading pytorch_model.bin:  44%|████▍     | 220M/499M [00:05<00:06, 41.4MB/s]Downloading pytorch_model.bin:  46%|████▋     | 231M/499M [00:06<00:06, 40.4MB/s]Downloading pytorch_model.bin:  48%|████▊     | 241M/499M [00:06<00:05, 43.5MB/s]Downloading pytorch_model.bin:  50%|█████     | 252M/499M [00:06<00:05, 41.8MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 262M/499M [00:06<00:05, 40.6MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 273M/499M [00:07<00:05, 43.7MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 283M/499M [00:07<00:05, 41.9MB/s]Downloading pytorch_model.bin:  59%|█████▉    | 294M/499M [00:07<00:04, 44.7MB/s]Downloading pytorch_model.bin:  61%|██████    | 304M/499M [00:07<00:04, 42.6MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 315M/499M [00:08<00:04, 41.1MB/s]Downloading pytorch_model.bin:  65%|██████▌   | 325M/499M [00:08<00:03, 44.1MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 336M/499M [00:08<00:03, 42.0MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 346M/499M [00:08<00:03, 40.8MB/s]Downloading pytorch_model.bin:  71%|███████▏  | 357M/499M [00:09<00:03, 43.8MB/s]Downloading pytorch_model.bin:  74%|███████▎  | 367M/499M [00:09<00:03, 42.0MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 377M/499M [00:09<00:02, 40.8MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 388M/499M [00:09<00:02, 43.9MB/s]Downloading pytorch_model.bin:  80%|███████▉  | 398M/499M [00:10<00:02, 42.1MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 409M/499M [00:10<00:01, 44.9MB/s]Downloading pytorch_model.bin:  84%|████████▍ | 419M/499M [00:10<00:01, 42.7MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 430M/499M [00:10<00:01, 41.3MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 440M/499M [00:11<00:01, 44.1MB/s]Downloading pytorch_model.bin:  90%|█████████ | 451M/499M [00:11<00:01, 42.3MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 461M/499M [00:11<00:00, 40.9MB/s]Downloading pytorch_model.bin:  95%|█████████▍| 472M/499M [00:11<00:00, 43.9MB/s]Downloading pytorch_model.bin:  97%|█████████▋| 482M/499M [00:12<00:00, 41.8MB/s]Downloading pytorch_model.bin:  99%|█████████▉| 493M/499M [00:12<00:00, 40.7MB/s]Downloading pytorch_model.bin: 100%|██████████| 499M/499M [00:12<00:00, 43.0MB/s]Downloading pytorch_model.bin: 100%|██████████| 499M/499M [00:12<00:00, 40.2MB/s]
-Some weights of the model checkpoint at pig4431/TweetEval_roBERTa_5E were not used when initializing RobertaModel: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.bias']
-- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaModel were not initialized from the model checkpoint at pig4431/TweetEval_roBERTa_5E and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Epoch 1/4
-----------
-Train loss 1.6085276257607244 accuracy 0.2231404958677686
-Val loss   1.6084246337413788 accuracy 0.4
-
-Epoch 2/4
-----------
-Train loss 1.607424836004934 accuracy 0.2231404958677686
-Val loss   1.6094379425048828 accuracy 0.2
-
-Epoch 3/4
-----------
-Train loss 1.6062152154984013 accuracy 0.19008264462809918
-Val loss   1.6093670427799225 accuracy 0.3333333333333333
-
-Epoch 4/4
-----------
-Train loss 1.6087235712235974 accuracy 0.2066115702479339
-Val loss   1.6094908714294434 accuracy 0.2
-
-Model saved to TweetEval_roBERTa_5E.pth
-
-Training tner/twitter-roberta-base-dec2021-tweetner7-random
-Downloading (…)okenizer_config.json:   0%|          | 0.00/412 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 412/412 [00:00<00:00, 239kB/s]
-Downloading (…)olve/main/vocab.json:   0%|          | 0.00/798k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 94.4MB/s]
-Downloading (…)olve/main/merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.69MB/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.69MB/s]
-Downloading (…)/main/tokenizer.json:   0%|          | 0.00/2.11M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 2.11M/2.11M [00:00<00:00, 5.88MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 2.11M/2.11M [00:00<00:00, 5.85MB/s]
-Downloading (…)cial_tokens_map.json:   0%|          | 0.00/239 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 239/239 [00:00<00:00, 140kB/s]
-Downloading (…)lve/main/config.json:   0%|          | 0.00/13.3k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 13.3k/13.3k [00:00<00:00, 4.07MB/s]
-Downloading pytorch_model.bin:   0%|          | 0.00/496M [00:00<?, ?B/s]Downloading pytorch_model.bin:   4%|▍         | 21.0M/496M [00:00<00:03, 148MB/s]Downloading pytorch_model.bin:  11%|█         | 52.4M/496M [00:00<00:02, 215MB/s]Downloading pytorch_model.bin:  17%|█▋        | 83.9M/496M [00:00<00:01, 250MB/s]Downloading pytorch_model.bin:  23%|██▎       | 115M/496M [00:00<00:01, 266MB/s] Downloading pytorch_model.bin:  30%|██▉       | 147M/496M [00:00<00:01, 275MB/s]Downloading pytorch_model.bin:  36%|███▌      | 178M/496M [00:00<00:01, 282MB/s]Downloading pytorch_model.bin:  42%|████▏     | 210M/496M [00:00<00:00, 287MB/s]Downloading pytorch_model.bin:  49%|████▊     | 241M/496M [00:00<00:00, 289MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 273M/496M [00:01<00:00, 291MB/s]Downloading pytorch_model.bin:  61%|██████▏   | 304M/496M [00:01<00:00, 293MB/s]Downloading pytorch_model.bin:  68%|██████▊   | 336M/496M [00:01<00:00, 294MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 367M/496M [00:01<00:00, 296MB/s]Downloading pytorch_model.bin:  80%|████████  | 398M/496M [00:01<00:00, 296MB/s]Downloading pytorch_model.bin:  87%|████████▋ | 430M/496M [00:01<00:00, 296MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 461M/496M [00:01<00:00, 297MB/s]Downloading pytorch_model.bin:  99%|█████████▉| 493M/496M [00:01<00:00, 298MB/s]Downloading pytorch_model.bin: 100%|██████████| 496M/496M [00:01<00:00, 282MB/s]
-Some weights of the model checkpoint at tner/twitter-roberta-base-dec2021-tweetner7-random were not used when initializing RobertaModel: ['classifier.weight', 'classifier.bias']
-- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaModel were not initialized from the model checkpoint at tner/twitter-roberta-base-dec2021-tweetner7-random and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Epoch 1/4
-----------
-Train loss 1.6109202677203762 accuracy 0.19008264462809918
-Val loss   1.6095529794692993 accuracy 0.2
-
-Epoch 2/4
-----------
-Train loss 1.6095177319742018 accuracy 0.2396694214876033
-Val loss   1.6096838414669037 accuracy 0.26666666666666666
-
-Epoch 3/4
-----------
-Train loss 1.6043851452489053 accuracy 0.2231404958677686
-Val loss   1.6054674685001373 accuracy 0.3333333333333333
-
-Epoch 4/4
-----------
-Train loss 1.6058189061380201 accuracy 0.21487603305785125
-Val loss   1.602943331003189 accuracy 0.3333333333333333
-
-Model saved to twitter-roberta-base-dec2021-tweetner7-random.pth
-
-Training cardiffnlp/tweet-topic-21-multi
-Downloading (…)okenizer_config.json:   0%|          | 0.00/1.30k [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 1.30k/1.30k [00:00<00:00, 877kB/s]
-Downloading (…)olve/main/vocab.json:   0%|          | 0.00/798k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.22MB/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.21MB/s]
-Downloading (…)olve/main/merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.68MB/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.68MB/s]
-Downloading (…)/main/tokenizer.json:   0%|          | 0.00/1.36M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 3.03MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 3.02MB/s]
-Downloading (…)cial_tokens_map.json:   0%|          | 0.00/239 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 239/239 [00:00<00:00, 118kB/s]
-Asking to truncate to max_length but no maximum length is provided and the model has no predefined maximum length. Default to no truncation.
-Downloading (…)lve/main/config.json:   0%|          | 0.00/1.88k [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 1.88k/1.88k [00:00<00:00, 994kB/s]
-Downloading pytorch_model.bin:   0%|          | 0.00/499M [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 10.5M/499M [00:00<00:38, 12.7MB/s]Downloading pytorch_model.bin:   4%|▍         | 21.0M/499M [00:01<00:21, 22.7MB/s]Downloading pytorch_model.bin:   6%|▋         | 31.5M/499M [00:01<00:16, 27.9MB/s]Downloading pytorch_model.bin:   8%|▊         | 41.9M/499M [00:01<00:14, 31.1MB/s]Downloading pytorch_model.bin:  11%|█         | 52.4M/499M [00:01<00:12, 36.6MB/s]Downloading pytorch_model.bin:  13%|█▎        | 62.9M/499M [00:02<00:11, 37.0MB/s]Downloading pytorch_model.bin:  15%|█▍        | 73.4M/499M [00:02<00:10, 40.4MB/s]Downloading pytorch_model.bin:  17%|█▋        | 83.9M/499M [00:02<00:10, 40.2MB/s]Downloading pytorch_model.bin:  19%|█▉        | 94.4M/499M [00:02<00:10, 39.4MB/s]Downloading pytorch_model.bin:  21%|██        | 105M/499M [00:03<00:09, 42.8MB/s] Downloading pytorch_model.bin:  23%|██▎       | 115M/499M [00:03<00:09, 41.2MB/s]Downloading pytorch_model.bin:  25%|██▌       | 126M/499M [00:03<00:08, 44.2MB/s]Downloading pytorch_model.bin:  27%|██▋       | 136M/499M [00:03<00:08, 42.2MB/s]Downloading pytorch_model.bin:  29%|██▉       | 147M/499M [00:04<00:08, 40.7MB/s]Downloading pytorch_model.bin:  32%|███▏      | 157M/499M [00:04<00:08, 39.7MB/s]Downloading pytorch_model.bin:  34%|███▎      | 168M/499M [00:04<00:07, 43.0MB/s]Downloading pytorch_model.bin:  36%|███▌      | 178M/499M [00:04<00:07, 41.3MB/s]Downloading pytorch_model.bin:  38%|███▊      | 189M/499M [00:05<00:07, 42.7MB/s]Downloading pytorch_model.bin:  40%|███▉      | 199M/499M [00:05<00:07, 41.1MB/s]Downloading pytorch_model.bin:  42%|████▏     | 210M/499M [00:05<00:06, 41.8MB/s]Downloading pytorch_model.bin:  44%|████▍     | 220M/499M [00:05<00:06, 42.8MB/s]Downloading pytorch_model.bin:  46%|████▋     | 231M/499M [00:06<00:06, 42.8MB/s]Downloading pytorch_model.bin:  48%|████▊     | 241M/499M [00:06<00:05, 43.8MB/s]Downloading pytorch_model.bin:  50%|█████     | 252M/499M [00:06<00:05, 41.8MB/s]Downloading pytorch_model.bin:  53%|█████▎    | 262M/499M [00:06<00:05, 42.8MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 273M/499M [00:06<00:05, 42.8MB/s]Downloading pytorch_model.bin:  57%|█████▋    | 283M/499M [00:07<00:04, 43.7MB/s]Downloading pytorch_model.bin:  59%|█████▉    | 294M/499M [00:07<00:04, 43.4MB/s]Downloading pytorch_model.bin:  61%|██████    | 304M/499M [00:07<00:04, 41.5MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 315M/499M [00:07<00:04, 42.8MB/s]Downloading pytorch_model.bin:  65%|██████▌   | 325M/499M [00:08<00:04, 43.1MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 336M/499M [00:08<00:03, 43.6MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 346M/499M [00:08<00:03, 43.7MB/s]Downloading pytorch_model.bin:  71%|███████▏  | 357M/499M [00:08<00:03, 41.8MB/s]Downloading pytorch_model.bin:  74%|███████▎  | 367M/499M [00:09<00:03, 42.8MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 377M/499M [00:09<00:02, 43.0MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 388M/499M [00:09<00:02, 43.7MB/s]Downloading pytorch_model.bin:  80%|███████▉  | 398M/499M [00:09<00:02, 42.7MB/s]Downloading pytorch_model.bin:  82%|████████▏ | 409M/499M [00:10<00:02, 41.9MB/s]Downloading pytorch_model.bin:  84%|████████▍ | 419M/499M [00:10<00:01, 43.2MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 430M/499M [00:10<00:01, 43.1MB/s]Downloading pytorch_model.bin:  88%|████████▊ | 440M/499M [00:10<00:01, 44.1MB/s]Downloading pytorch_model.bin:  90%|█████████ | 451M/499M [00:11<00:01, 43.5MB/s]Downloading pytorch_model.bin:  93%|█████████▎| 461M/499M [00:11<00:00, 41.7MB/s]Downloading pytorch_model.bin:  95%|█████████▍| 472M/499M [00:11<00:00, 43.2MB/s]Downloading pytorch_model.bin:  97%|█████████▋| 482M/499M [00:11<00:00, 42.8MB/s]Downloading pytorch_model.bin:  99%|█████████▉| 493M/499M [00:12<00:00, 44.1MB/s]Downloading pytorch_model.bin: 100%|██████████| 499M/499M [00:12<00:00, 42.7MB/s]Downloading pytorch_model.bin: 100%|██████████| 499M/499M [00:12<00:00, 40.7MB/s]
-Some weights of the model checkpoint at cardiffnlp/tweet-topic-21-multi were not used when initializing RobertaModel: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.bias']
-- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaModel were not initialized from the model checkpoint at cardiffnlp/tweet-topic-21-multi and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Epoch 1/4
-----------
-Train loss 1.6124360869007726 accuracy 0.15702479338842976
-Val loss   1.6093721985816956 accuracy 0.26666666666666666
-
-Epoch 2/4
-----------
-Train loss 1.609605308501951 accuracy 0.2644628099173554
-Val loss   1.6090965569019318 accuracy 0.26666666666666666
-
-Epoch 3/4
-----------
-Train loss 1.6052754156051143 accuracy 0.25619834710743805
-Val loss   1.609035074710846 accuracy 0.26666666666666666
-
-Epoch 4/4
-----------
-Train loss 1.6059543509637155 accuracy 0.2231404958677686
-Val loss   1.6088979840278625 accuracy 0.26666666666666666
-
-Model saved to tweet-topic-21-multi.pth
-
-Training cardiffnlp/twitter-roberta-base-2021-124m
-Downloading (…)okenizer_config.json:   0%|          | 0.00/345 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 345/345 [00:00<00:00, 225kB/s]
-Downloading (…)olve/main/vocab.json:   0%|          | 0.00/798k [00:00<?, ?B/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.22MB/s]Downloading (…)olve/main/vocab.json: 100%|██████████| 798k/798k [00:00<00:00, 2.21MB/s]
-Downloading (…)olve/main/merges.txt:   0%|          | 0.00/456k [00:00<?, ?B/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.69MB/s]Downloading (…)olve/main/merges.txt: 100%|██████████| 456k/456k [00:00<00:00, 1.69MB/s]
-Downloading (…)/main/tokenizer.json:   0%|          | 0.00/1.36M [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 3.01MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 1.36M/1.36M [00:00<00:00, 3.00MB/s]
-Downloading (…)cial_tokens_map.json:   0%|          | 0.00/239 [00:00<?, ?B/s]Downloading (…)cial_tokens_map.json: 100%|██████████| 239/239 [00:00<00:00, 123kB/s]
-Downloading (…)lve/main/config.json:   0%|          | 0.00/724 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 724/724 [00:00<00:00, 399kB/s]
-Downloading pytorch_model.bin:   0%|          | 0.00/499M [00:00<?, ?B/s]Downloading pytorch_model.bin:   4%|▍         | 21.0M/499M [00:00<00:02, 187MB/s]Downloading pytorch_model.bin:  11%|█         | 52.4M/499M [00:00<00:02, 215MB/s]Downloading pytorch_model.bin:  17%|█▋        | 83.9M/499M [00:00<00:01, 222MB/s]Downloading pytorch_model.bin:  23%|██▎       | 115M/499M [00:00<00:01, 227MB/s] Downloading pytorch_model.bin:  29%|██▉       | 147M/499M [00:00<00:01, 229MB/s]Downloading pytorch_model.bin:  36%|███▌      | 178M/499M [00:00<00:01, 231MB/s]Downloading pytorch_model.bin:  42%|████▏     | 210M/499M [00:00<00:01, 233MB/s]Downloading pytorch_model.bin:  48%|████▊     | 241M/499M [00:01<00:01, 234MB/s]Downloading pytorch_model.bin:  55%|█████▍    | 273M/499M [00:01<00:00, 235MB/s]Downloading pytorch_model.bin:  61%|██████    | 304M/499M [00:01<00:00, 236MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 336M/499M [00:01<00:00, 235MB/s]Downloading pytorch_model.bin:  74%|███████▎  | 367M/499M [00:01<00:00, 232MB/s]Downloading pytorch_model.bin:  80%|███████▉  | 398M/499M [00:01<00:00, 229MB/s]Downloading pytorch_model.bin:  86%|████████▌ | 430M/499M [00:01<00:00, 228MB/s]Downloading pytorch_model.bin:  92%|█████████▏| 461M/499M [00:02<00:00, 227MB/s]Downloading pytorch_model.bin:  99%|█████████▉| 493M/499M [00:02<00:00, 227MB/s]Downloading pytorch_model.bin: 100%|██████████| 499M/499M [00:02<00:00, 228MB/s]
-Some weights of the model checkpoint at cardiffnlp/twitter-roberta-base-2021-124m were not used when initializing RobertaModel: ['lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.dense.bias']
-- This IS expected if you are initializing RobertaModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaModel were not initialized from the model checkpoint at cardiffnlp/twitter-roberta-base-2021-124m and are newly initialized: ['roberta.pooler.dense.bias', 'roberta.pooler.dense.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-Epoch 1/4
-----------
-Train loss 1.609182926916307 accuracy 0.2231404958677686
-Val loss   1.6101219952106476 accuracy 0.2
-
-Epoch 2/4
-----------
-Train loss 1.6021516053907332 accuracy 0.3140495867768595
-Val loss   1.6092943251132965 accuracy 0.2
-
-Epoch 3/4
-----------
-Train loss 1.6130822243229035 accuracy 0.2396694214876033
-Val loss   1.6079009771347046 accuracy 0.26666666666666666
-
-Epoch 4/4
-----------
-Train loss 1.6043415877126879 accuracy 0.2644628099173554
-Val loss   1.6075817048549652 accuracy 0.26666666666666666
-
-Model saved to twitter-roberta-base-2021-124m.pth
-

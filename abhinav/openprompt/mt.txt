@@ -1,3 +1,0 @@
-[ Category : {"mask"} ] {"placeholder": "text_a"} {"placeholder": "text_b"}
-[ Topic : {"mask"} ] {"placeholder": "text_a"} {"placeholder": "text_b"}
-{"placeholder":"text_a"} The tweet is about {"mask"}

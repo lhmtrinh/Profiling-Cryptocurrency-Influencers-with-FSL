@@ -1,213 +1,0 @@
-Some weights of the model checkpoint at tner/roberta-large-tweetner7-all were not used when initializing RobertaForSequenceClassification: ['classifier.bias', 'classifier.weight']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at tner/roberta-large-tweetner7-all and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-Some weights of the model checkpoint at tner/bertweet-large-tweetner7-all were not used when initializing RobertaForSequenceClassification: ['classifier.bias', 'classifier.weight']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at tner/bertweet-large-tweetner7-all and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-Training tner/roberta-large-tweetner7-all:
-{'loss': 0.615, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.5042797923088074, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.4449, 'eval_samples_per_second': 10.381, 'eval_steps_per_second': 2.768, 'epoch': 1.0}
-{'loss': 0.4954, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.5169920325279236, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.4891, 'eval_samples_per_second': 10.073, 'eval_steps_per_second': 2.686, 'epoch': 2.0}
-{'loss': 0.4475, 'learning_rate': 1.8e-05, 'epoch': 2.9}
-{'eval_loss': 0.49120134115219116, 'eval_f1': 0.2222222222222222, 'eval_roc_auc': 0.5583333333333332, 'eval_accuracy': 0.13333333333333333, 'eval_runtime': 1.5687, 'eval_samples_per_second': 9.562, 'eval_steps_per_second': 2.55, 'epoch': 3.0}
-{'loss': 0.3664, 'learning_rate': 1.9724137931034483e-05, 'epoch': 3.87}
-{'eval_loss': 0.46570953726768494, 'eval_f1': 0.33333333333333337, 'eval_roc_auc': 0.5916666666666666, 'eval_accuracy': 0.2, 'eval_runtime': 1.5919, 'eval_samples_per_second': 9.423, 'eval_steps_per_second': 2.513, 'epoch': 4.0}
-{'loss': 0.322, 'learning_rate': 1.931034482758621e-05, 'epoch': 4.84}
-{'eval_loss': 0.48055973649024963, 'eval_f1': 0.5517241379310344, 'eval_roc_auc': 0.7166666666666666, 'eval_accuracy': 0.3333333333333333, 'eval_runtime': 1.6248, 'eval_samples_per_second': 9.232, 'eval_steps_per_second': 2.462, 'epoch': 5.0}
-{'loss': 0.2241, 'learning_rate': 1.8896551724137934e-05, 'epoch': 5.81}
-{'eval_loss': 0.5441312789916992, 'eval_f1': 0.3703703703703704, 'eval_roc_auc': 0.6083333333333333, 'eval_accuracy': 0.3333333333333333, 'eval_runtime': 1.6486, 'eval_samples_per_second': 9.099, 'eval_steps_per_second': 2.426, 'epoch': 6.0}
-{'loss': 0.154, 'learning_rate': 1.8482758620689657e-05, 'epoch': 6.77}
-{'eval_loss': 0.5937139391899109, 'eval_f1': 0.38709677419354843, 'eval_roc_auc': 0.6166666666666667, 'eval_accuracy': 0.4, 'eval_runtime': 1.655, 'eval_samples_per_second': 9.064, 'eval_steps_per_second': 2.417, 'epoch': 7.0}
-{'loss': 0.0812, 'learning_rate': 1.806896551724138e-05, 'epoch': 7.74}
-{'eval_loss': 0.6799351572990417, 'eval_f1': 0.4137931034482759, 'eval_roc_auc': 0.6333333333333333, 'eval_accuracy': 0.4, 'eval_runtime': 1.6706, 'eval_samples_per_second': 8.979, 'eval_steps_per_second': 2.394, 'epoch': 8.0}
-{'loss': 0.0564, 'learning_rate': 1.7655172413793105e-05, 'epoch': 8.71}
-{'eval_loss': 0.7630869746208191, 'eval_f1': 0.3448275862068965, 'eval_roc_auc': 0.5916666666666667, 'eval_accuracy': 0.3333333333333333, 'eval_runtime': 1.6624, 'eval_samples_per_second': 9.023, 'eval_steps_per_second': 2.406, 'epoch': 9.0}
-{'loss': 0.0348, 'learning_rate': 1.7241379310344828e-05, 'epoch': 9.68}
-{'eval_loss': 0.7305482029914856, 'eval_f1': 0.4827586206896552, 'eval_roc_auc': 0.675, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6775, 'eval_samples_per_second': 8.942, 'eval_steps_per_second': 2.385, 'epoch': 10.0}
-{'train_runtime': 469.0247, 'train_samples_per_second': 12.899, 'train_steps_per_second': 3.305, 'train_loss': 0.2712357477795693, 'epoch': 10.0}
-
-Training tner/bertweet-large-tweetner7-all:
-{'loss': 0.595, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.4945887327194214, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.6152, 'eval_samples_per_second': 9.287, 'eval_steps_per_second': 2.477, 'epoch': 1.0}
-{'loss': 0.4861, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.48209744691848755, 'eval_f1': 0.125, 'eval_roc_auc': 0.5333333333333333, 'eval_accuracy': 0.06666666666666667, 'eval_runtime': 1.6279, 'eval_samples_per_second': 9.214, 'eval_steps_per_second': 2.457, 'epoch': 2.0}
-{'loss': 0.4086, 'learning_rate': 1.8e-05, 'epoch': 2.9}
-{'eval_loss': 0.4273225665092468, 'eval_f1': 0.33333333333333337, 'eval_roc_auc': 0.5916666666666666, 'eval_accuracy': 0.26666666666666666, 'eval_runtime': 1.654, 'eval_samples_per_second': 9.069, 'eval_steps_per_second': 2.418, 'epoch': 3.0}
-{'loss': 0.3298, 'learning_rate': 1.9724137931034483e-05, 'epoch': 3.87}
-{'eval_loss': 0.42559757828712463, 'eval_f1': 0.4166666666666667, 'eval_roc_auc': 0.6333333333333333, 'eval_accuracy': 0.3333333333333333, 'eval_runtime': 1.6517, 'eval_samples_per_second': 9.081, 'eval_steps_per_second': 2.422, 'epoch': 4.0}
-{'loss': 0.2879, 'learning_rate': 1.931034482758621e-05, 'epoch': 4.84}
-{'eval_loss': 0.5532857775688171, 'eval_f1': 0.30769230769230765, 'eval_roc_auc': 0.575, 'eval_accuracy': 0.26666666666666666, 'eval_runtime': 1.6635, 'eval_samples_per_second': 9.017, 'eval_steps_per_second': 2.404, 'epoch': 5.0}
-{'loss': 0.2221, 'learning_rate': 1.8896551724137934e-05, 'epoch': 5.81}
-{'eval_loss': 0.5145390033721924, 'eval_f1': 0.3846153846153846, 'eval_roc_auc': 0.6166666666666667, 'eval_accuracy': 0.3333333333333333, 'eval_runtime': 1.6579, 'eval_samples_per_second': 9.047, 'eval_steps_per_second': 2.413, 'epoch': 6.0}
-{'loss': 0.195, 'learning_rate': 1.8482758620689657e-05, 'epoch': 6.77}
-{'eval_loss': 0.4494882822036743, 'eval_f1': 0.5806451612903225, 'eval_roc_auc': 0.7416666666666667, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6705, 'eval_samples_per_second': 8.979, 'eval_steps_per_second': 2.394, 'epoch': 7.0}
-{'loss': 0.1069, 'learning_rate': 1.806896551724138e-05, 'epoch': 7.74}
-{'eval_loss': 0.4937995374202728, 'eval_f1': 0.5, 'eval_roc_auc': 0.6833333333333333, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6749, 'eval_samples_per_second': 8.956, 'eval_steps_per_second': 2.388, 'epoch': 8.0}
-{'loss': 0.0338, 'learning_rate': 1.7655172413793105e-05, 'epoch': 8.71}
-{'eval_loss': 0.5796021223068237, 'eval_f1': 0.5333333333333333, 'eval_roc_auc': 0.7083333333333333, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6657, 'eval_samples_per_second': 9.005, 'eval_steps_per_second': 2.401, 'epoch': 9.0}
-{'loss': 0.0225, 'learning_rate': 1.7241379310344828e-05, 'epoch': 9.68}
-{'eval_loss': 0.46637430787086487, 'eval_f1': 0.6428571428571429, 'eval_roc_auc': 0.7666666666666667, 'eval_accuracy': 0.6, 'eval_runtime': 1.6745, 'eval_samples_per_second': 8.958, 'eval_steps_per_second': 2.389, 'epoch': 10.0}
-{'loss': 0.0129, 'learning_rate': 1.6827586206896552e-05, 'epoch': 10.65}
-{'eval_loss': 0.5575507283210754, 'eval_f1': 0.4444444444444445, 'eval_roc_auc': 0.65, 'eval_accuracy': 0.4, 'eval_runtime': 1.6824, 'eval_samples_per_second': 8.916, 'eval_steps_per_second': 2.378, 'epoch': 11.0}
-{'loss': 0.0096, 'learning_rate': 1.6413793103448276e-05, 'epoch': 11.61}
-{'eval_loss': 0.5892626047134399, 'eval_f1': 0.5714285714285715, 'eval_roc_auc': 0.725, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6621, 'eval_samples_per_second': 9.025, 'eval_steps_per_second': 2.407, 'epoch': 12.0}
-{'loss': 0.008, 'learning_rate': 1.6000000000000003e-05, 'epoch': 12.58}
-{'eval_loss': 0.625322699546814, 'eval_f1': 0.5, 'eval_roc_auc': 0.6833333333333333, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6793, 'eval_samples_per_second': 8.932, 'eval_steps_per_second': 2.382, 'epoch': 13.0}
-{'loss': 0.0068, 'learning_rate': 1.5586206896551726e-05, 'epoch': 13.55}
-{'eval_loss': 0.6266250014305115, 'eval_f1': 0.5714285714285715, 'eval_roc_auc': 0.725, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6759, 'eval_samples_per_second': 8.95, 'eval_steps_per_second': 2.387, 'epoch': 14.0}
-{'loss': 0.0061, 'learning_rate': 1.5172413793103448e-05, 'epoch': 14.52}
-{'eval_loss': 0.6234037280082703, 'eval_f1': 0.5714285714285715, 'eval_roc_auc': 0.725, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6675, 'eval_samples_per_second': 8.996, 'eval_steps_per_second': 2.399, 'epoch': 15.0}
-{'train_runtime': 718.6376, 'train_samples_per_second': 8.419, 'train_steps_per_second': 2.157, 'train_loss': 0.17638280228261025, 'epoch': 15.0}
-
-Training cardiffnlp/twitter-roberta-large-2022-154m:
-Downloading (…)lve/main/config.json:   0%|          | 0.00/723 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 723/723 [00:00<00:00, 257kB/s]
-Downloading pytorch_model.bin:   0%|          | 0.00/1.42G [00:00<?, ?B/s]Downloading pytorch_model.bin:   2%|▏         | 31.5M/1.42G [00:00<00:06, 211MB/s]Downloading pytorch_model.bin:   4%|▍         | 62.9M/1.42G [00:00<00:06, 214MB/s]Downloading pytorch_model.bin:   7%|▋         | 94.4M/1.42G [00:00<00:06, 219MB/s]Downloading pytorch_model.bin:   9%|▉         | 126M/1.42G [00:00<00:06, 190MB/s] Downloading pytorch_model.bin:  10%|█         | 147M/1.42G [00:00<00:06, 194MB/s]Downloading pytorch_model.bin:  12%|█▏        | 168M/1.42G [00:00<00:06, 198MB/s]Downloading pytorch_model.bin:  14%|█▍        | 199M/1.42G [00:00<00:05, 208MB/s]Downloading pytorch_model.bin:  16%|█▌        | 231M/1.42G [00:01<00:05, 216MB/s]Downloading pytorch_model.bin:  18%|█▊        | 262M/1.42G [00:01<00:05, 220MB/s]Downloading pytorch_model.bin:  21%|██        | 294M/1.42G [00:01<00:05, 224MB/s]Downloading pytorch_model.bin:  23%|██▎       | 325M/1.42G [00:01<00:04, 230MB/s]Downloading pytorch_model.bin:  25%|██▌       | 357M/1.42G [00:01<00:04, 232MB/s]Downloading pytorch_model.bin:  27%|██▋       | 388M/1.42G [00:01<00:04, 230MB/s]Downloading pytorch_model.bin:  30%|██▉       | 419M/1.42G [00:01<00:04, 223MB/s]Downloading pytorch_model.bin:  32%|███▏      | 451M/1.42G [00:02<00:04, 219MB/s]Downloading pytorch_model.bin:  34%|███▍      | 482M/1.42G [00:02<00:04, 219MB/s]Downloading pytorch_model.bin:  36%|███▌      | 514M/1.42G [00:02<00:04, 222MB/s]Downloading pytorch_model.bin:  38%|███▊      | 545M/1.42G [00:02<00:03, 227MB/s]Downloading pytorch_model.bin:  41%|████      | 577M/1.42G [00:02<00:03, 229MB/s]Downloading pytorch_model.bin:  43%|████▎     | 608M/1.42G [00:02<00:03, 232MB/s]Downloading pytorch_model.bin:  45%|████▍     | 640M/1.42G [00:02<00:03, 237MB/s]Downloading pytorch_model.bin:  47%|████▋     | 671M/1.42G [00:03<00:03, 235MB/s]Downloading pytorch_model.bin:  49%|████▉     | 703M/1.42G [00:03<00:03, 239MB/s]Downloading pytorch_model.bin:  52%|█████▏    | 734M/1.42G [00:03<00:02, 236MB/s]Downloading pytorch_model.bin:  54%|█████▍    | 765M/1.42G [00:03<00:02, 239MB/s]Downloading pytorch_model.bin:  56%|█████▌    | 797M/1.42G [00:03<00:02, 242MB/s]Downloading pytorch_model.bin:  58%|█████▊    | 828M/1.42G [00:03<00:02, 249MB/s]Downloading pytorch_model.bin:  60%|██████    | 860M/1.42G [00:03<00:02, 250MB/s]Downloading pytorch_model.bin:  63%|██████▎   | 891M/1.42G [00:03<00:02, 245MB/s]Downloading pytorch_model.bin:  65%|██████▍   | 923M/1.42G [00:04<00:02, 242MB/s]Downloading pytorch_model.bin:  67%|██████▋   | 954M/1.42G [00:04<00:01, 247MB/s]Downloading pytorch_model.bin:  69%|██████▉   | 986M/1.42G [00:04<00:01, 250MB/s]Downloading pytorch_model.bin:  72%|███████▏  | 1.02G/1.42G [00:04<00:01, 252MB/s]Downloading pytorch_model.bin:  74%|███████▍  | 1.05G/1.42G [00:04<00:01, 254MB/s]Downloading pytorch_model.bin:  76%|███████▌  | 1.08G/1.42G [00:04<00:01, 255MB/s]Downloading pytorch_model.bin:  78%|███████▊  | 1.11G/1.42G [00:04<00:01, 254MB/s]Downloading pytorch_model.bin:  80%|████████  | 1.14G/1.42G [00:04<00:01, 254MB/s]Downloading pytorch_model.bin:  83%|████████▎ | 1.17G/1.42G [00:05<00:00, 253MB/s]Downloading pytorch_model.bin:  85%|████████▍ | 1.21G/1.42G [00:05<00:00, 253MB/s]Downloading pytorch_model.bin:  87%|████████▋ | 1.24G/1.42G [00:05<00:00, 253MB/s]Downloading pytorch_model.bin:  89%|████████▉ | 1.27G/1.42G [00:05<00:00, 256MB/s]Downloading pytorch_model.bin:  91%|█████████▏| 1.30G/1.42G [00:05<00:00, 258MB/s]Downloading pytorch_model.bin:  94%|█████████▎| 1.33G/1.42G [00:05<00:00, 259MB/s]Downloading pytorch_model.bin:  96%|█████████▌| 1.36G/1.42G [00:05<00:00, 260MB/s]Downloading pytorch_model.bin:  98%|█████████▊| 1.39G/1.42G [00:05<00:00, 260MB/s]Downloading pytorch_model.bin: 100%|██████████| 1.42G/1.42G [00:05<00:00, 261MB/s]Downloading pytorch_model.bin: 100%|██████████| 1.42G/1.42G [00:05<00:00, 237MB/s]
-Some weights of the model checkpoint at cardiffnlp/twitter-roberta-large-2022-154m were not used when initializing RobertaForSequenceClassification: ['lm_head.layer_norm.bias', 'lm_head.layer_norm.weight', 'lm_head.bias', 'lm_head.dense.weight', 'lm_head.dense.bias']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at cardiffnlp/twitter-roberta-large-2022-154m and are newly initialized: ['classifier.out_proj.bias', 'classifier.dense.bias', 'classifier.dense.weight', 'classifier.out_proj.weight']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-{'loss': 0.6718, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.583349883556366, 'eval_f1': 0.0, 'eval_roc_auc': 0.475, 'eval_accuracy': 0.0, 'eval_runtime': 1.6345, 'eval_samples_per_second': 9.177, 'eval_steps_per_second': 2.447, 'epoch': 1.0}
-{'loss': 0.5116, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.46797022223472595, 'eval_f1': 0.125, 'eval_roc_auc': 0.5333333333333333, 'eval_accuracy': 0.06666666666666667, 'eval_runtime': 1.6459, 'eval_samples_per_second': 9.114, 'eval_steps_per_second': 2.43, 'epoch': 2.0}
-Traceback (most recent call last):
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/torch/serialization.py", line 441, in save
-    _save(obj, opened_zipfile, pickle_module, pickle_protocol)
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/torch/serialization.py", line 668, in _save
-    zip_file.write_record(name, storage.data_ptr(), num_bytes)
-RuntimeError: [enforce fail at inline_container.cc:471] . PytorchStreamWriter failed writing file data/37: file write failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "script.py", line 69, in <module>
-    trainer.train()
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/trainer.py", line 1662, in train
-    return inner_training_loop(
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/trainer.py", line 2021, in _inner_training_loop
-    self._maybe_log_save_evaluate(tr_loss, model, trial, epoch, ignore_keys_for_eval)
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/trainer.py", line 2291, in _maybe_log_save_evaluate
-    self._save_checkpoint(model, trial, metrics=metrics)
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/trainer.py", line 2382, in _save_checkpoint
-    torch.save(self.optimizer.state_dict(), os.path.join(output_dir, OPTIMIZER_NAME))
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/torch/serialization.py", line 442, in save
-    return
-  File "/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/torch/serialization.py", line 291, in __exit__
-    self.file_like.write_end_of_file()
-RuntimeError: [enforce fail at inline_container.cc:337] . unexpected pos 2282974400 vs 2282974288
-Some weights of the model checkpoint at cardiffnlp/twitter-roberta-large-2022-154m were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.bias', 'lm_head.bias', 'lm_head.layer_norm.weight']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at cardiffnlp/twitter-roberta-large-2022-154m and are newly initialized: ['classifier.out_proj.weight', 'classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.dense.bias']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-Some weights of the model checkpoint at roberta-large were not used when initializing RobertaForSequenceClassification: ['lm_head.dense.bias', 'roberta.pooler.dense.weight', 'lm_head.dense.weight', 'lm_head.bias', 'lm_head.layer_norm.bias', 'lm_head.decoder.weight', 'roberta.pooler.dense.bias', 'lm_head.layer_norm.weight']
-- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at roberta-large and are newly initialized: ['classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a RobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-Some weights of the model checkpoint at google/electra-large-discriminator were not used when initializing ElectraForSequenceClassification: ['discriminator_predictions.dense.bias', 'discriminator_predictions.dense_prediction.bias', 'discriminator_predictions.dense.weight', 'discriminator_predictions.dense_prediction.weight']
-- This IS expected if you are initializing ElectraForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
-- This IS NOT expected if you are initializing ElectraForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of ElectraForSequenceClassification were not initialized from the model checkpoint at google/electra-large-discriminator and are newly initialized: ['classifier.dense.weight', 'classifier.dense.bias', 'classifier.out_proj.weight', 'classifier.out_proj.bias']
-You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-/mnt/home/lehoangminhtrinh/env/lib/python3.8/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
-  warnings.warn(
-You're using a ElectraTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-Training cardiffnlp/twitter-roberta-large-2022-154m:
-{'loss': 0.6239, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.5046794414520264, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.4421, 'eval_samples_per_second': 10.401, 'eval_steps_per_second': 2.774, 'epoch': 1.0}
-{'loss': 0.502, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.49578553438186646, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.4788, 'eval_samples_per_second': 10.143, 'eval_steps_per_second': 2.705, 'epoch': 2.0}
-{'loss': 0.4421, 'learning_rate': 1.8e-05, 'epoch': 2.9}
-{'eval_loss': 0.45894744992256165, 'eval_f1': 0.26086956521739135, 'eval_roc_auc': 0.5583333333333332, 'eval_accuracy': 0.2, 'eval_runtime': 1.5548, 'eval_samples_per_second': 9.648, 'eval_steps_per_second': 2.573, 'epoch': 3.0}
-{'loss': 0.3901, 'learning_rate': 1.9724137931034483e-05, 'epoch': 3.87}
-{'eval_loss': 0.38774073123931885, 'eval_f1': 0.31578947368421056, 'eval_roc_auc': 0.5916666666666667, 'eval_accuracy': 0.2, 'eval_runtime': 1.5807, 'eval_samples_per_second': 9.49, 'eval_steps_per_second': 2.531, 'epoch': 4.0}
-{'loss': 0.2999, 'learning_rate': 1.931034482758621e-05, 'epoch': 4.84}
-{'eval_loss': 0.38880082964897156, 'eval_f1': 0.48, 'eval_roc_auc': 0.6666666666666666, 'eval_accuracy': 0.4, 'eval_runtime': 1.6187, 'eval_samples_per_second': 9.267, 'eval_steps_per_second': 2.471, 'epoch': 5.0}
-{'loss': 0.2303, 'learning_rate': 1.8896551724137934e-05, 'epoch': 5.81}
-{'eval_loss': 0.38253989815711975, 'eval_f1': 0.64, 'eval_roc_auc': 0.7499999999999999, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6281, 'eval_samples_per_second': 9.213, 'eval_steps_per_second': 2.457, 'epoch': 6.0}
-{'loss': 0.1615, 'learning_rate': 1.8482758620689657e-05, 'epoch': 6.77}
-{'eval_loss': 0.38334694504737854, 'eval_f1': 0.6923076923076923, 'eval_roc_auc': 0.7833333333333334, 'eval_accuracy': 0.6, 'eval_runtime': 1.6441, 'eval_samples_per_second': 9.123, 'eval_steps_per_second': 2.433, 'epoch': 7.0}
-{'loss': 0.0872, 'learning_rate': 1.806896551724138e-05, 'epoch': 7.74}
-{'eval_loss': 0.5942423343658447, 'eval_f1': 0.5185185185185186, 'eval_roc_auc': 0.6916666666666668, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6673, 'eval_samples_per_second': 8.997, 'eval_steps_per_second': 2.399, 'epoch': 8.0}
-{'loss': 0.0351, 'learning_rate': 1.7655172413793105e-05, 'epoch': 8.71}
-{'eval_loss': 0.5285757184028625, 'eval_f1': 0.6153846153846153, 'eval_roc_auc': 0.7416666666666666, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6656, 'eval_samples_per_second': 9.006, 'eval_steps_per_second': 2.402, 'epoch': 9.0}
-{'loss': 0.0359, 'learning_rate': 1.7241379310344828e-05, 'epoch': 9.68}
-{'eval_loss': 0.5012994408607483, 'eval_f1': 0.6153846153846153, 'eval_roc_auc': 0.7416666666666666, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6612, 'eval_samples_per_second': 9.029, 'eval_steps_per_second': 2.408, 'epoch': 10.0}
-{'loss': 0.0109, 'learning_rate': 1.6827586206896552e-05, 'epoch': 10.65}
-{'eval_loss': 0.5730662941932678, 'eval_f1': 0.5185185185185186, 'eval_roc_auc': 0.6916666666666668, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6779, 'eval_samples_per_second': 8.94, 'eval_steps_per_second': 2.384, 'epoch': 11.0}
-{'loss': 0.0085, 'learning_rate': 1.6413793103448276e-05, 'epoch': 11.61}
-{'eval_loss': 0.4494315981864929, 'eval_f1': 0.64, 'eval_roc_auc': 0.7499999999999999, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.678, 'eval_samples_per_second': 8.939, 'eval_steps_per_second': 2.384, 'epoch': 12.0}
-{'train_runtime': 574.6526, 'train_samples_per_second': 10.528, 'train_steps_per_second': 2.697, 'train_loss': 0.22823697072203442, 'epoch': 12.0}
-
-Training roberta-large:
-{'loss': 0.6472, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.5539094805717468, 'eval_f1': 0.08695652173913045, 'eval_roc_auc': 0.475, 'eval_accuracy': 0.0, 'eval_runtime': 1.6305, 'eval_samples_per_second': 9.2, 'eval_steps_per_second': 2.453, 'epoch': 1.0}
-{'loss': 0.5356, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.5120511651039124, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.6397, 'eval_samples_per_second': 9.148, 'eval_steps_per_second': 2.44, 'epoch': 2.0}
-{'loss': 0.502, 'learning_rate': 1.8e-05, 'epoch': 2.9}
-{'eval_loss': 0.470876544713974, 'eval_f1': 0.0, 'eval_roc_auc': 0.49166666666666664, 'eval_accuracy': 0.0, 'eval_runtime': 1.6564, 'eval_samples_per_second': 9.056, 'eval_steps_per_second': 2.415, 'epoch': 3.0}
-{'loss': 0.433, 'learning_rate': 1.9724137931034483e-05, 'epoch': 3.87}
-{'eval_loss': 0.426085889339447, 'eval_f1': 0.1111111111111111, 'eval_roc_auc': 0.5166666666666666, 'eval_accuracy': 0.06666666666666667, 'eval_runtime': 1.6525, 'eval_samples_per_second': 9.077, 'eval_steps_per_second': 2.421, 'epoch': 4.0}
-{'loss': 0.3889, 'learning_rate': 1.931034482758621e-05, 'epoch': 4.84}
-{'eval_loss': 0.41126951575279236, 'eval_f1': 0.36363636363636365, 'eval_roc_auc': 0.6083333333333333, 'eval_accuracy': 0.26666666666666666, 'eval_runtime': 1.6518, 'eval_samples_per_second': 9.081, 'eval_steps_per_second': 2.422, 'epoch': 5.0}
-{'loss': 0.2728, 'learning_rate': 1.8896551724137934e-05, 'epoch': 5.81}
-{'eval_loss': 0.42253249883651733, 'eval_f1': 0.5185185185185186, 'eval_roc_auc': 0.6916666666666668, 'eval_accuracy': 0.4, 'eval_runtime': 1.6681, 'eval_samples_per_second': 8.992, 'eval_steps_per_second': 2.398, 'epoch': 6.0}
-{'loss': 0.2251, 'learning_rate': 1.8482758620689657e-05, 'epoch': 6.77}
-{'eval_loss': 0.3939739465713501, 'eval_f1': 0.6451612903225806, 'eval_roc_auc': 0.7833333333333333, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6645, 'eval_samples_per_second': 9.012, 'eval_steps_per_second': 2.403, 'epoch': 7.0}
-{'loss': 0.1277, 'learning_rate': 1.806896551724138e-05, 'epoch': 7.74}
-{'eval_loss': 0.5039040446281433, 'eval_f1': 0.5185185185185186, 'eval_roc_auc': 0.6916666666666668, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6669, 'eval_samples_per_second': 8.999, 'eval_steps_per_second': 2.4, 'epoch': 8.0}
-{'loss': 0.0802, 'learning_rate': 1.7655172413793105e-05, 'epoch': 8.71}
-{'eval_loss': 0.44501200318336487, 'eval_f1': 0.6428571428571429, 'eval_roc_auc': 0.7666666666666667, 'eval_accuracy': 0.6, 'eval_runtime': 1.6645, 'eval_samples_per_second': 9.012, 'eval_steps_per_second': 2.403, 'epoch': 9.0}
-{'loss': 0.0578, 'learning_rate': 1.7241379310344828e-05, 'epoch': 9.68}
-{'eval_loss': 0.5512445569038391, 'eval_f1': 0.6, 'eval_roc_auc': 0.7500000000000001, 'eval_accuracy': 0.6, 'eval_runtime': 1.676, 'eval_samples_per_second': 8.95, 'eval_steps_per_second': 2.387, 'epoch': 10.0}
-{'loss': 0.0236, 'learning_rate': 1.6827586206896552e-05, 'epoch': 10.65}
-{'eval_loss': 0.590682864189148, 'eval_f1': 0.5333333333333333, 'eval_roc_auc': 0.7083333333333333, 'eval_accuracy': 0.5333333333333333, 'eval_runtime': 1.6791, 'eval_samples_per_second': 8.933, 'eval_steps_per_second': 2.382, 'epoch': 11.0}
-{'loss': 0.0112, 'learning_rate': 1.6413793103448276e-05, 'epoch': 11.61}
-{'eval_loss': 0.6815024614334106, 'eval_f1': 0.4666666666666667, 'eval_roc_auc': 0.6666666666666667, 'eval_accuracy': 0.4666666666666667, 'eval_runtime': 1.6738, 'eval_samples_per_second': 8.961, 'eval_steps_per_second': 2.39, 'epoch': 12.0}
-{'train_runtime': 575.5083, 'train_samples_per_second': 10.512, 'train_steps_per_second': 2.693, 'train_loss': 0.2674416943743665, 'epoch': 12.0}
-
-Training google/electra-large-discriminator:
-{'loss': 0.6688, 'learning_rate': 6e-06, 'epoch': 0.97}
-{'eval_loss': 0.6224364042282104, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.7746, 'eval_samples_per_second': 8.452, 'eval_steps_per_second': 2.254, 'epoch': 1.0}
-{'loss': 0.5804, 'learning_rate': 1.2e-05, 'epoch': 1.94}
-{'eval_loss': 0.5223876237869263, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.7958, 'eval_samples_per_second': 8.353, 'eval_steps_per_second': 2.227, 'epoch': 2.0}
-{'loss': 0.5162, 'learning_rate': 1.8e-05, 'epoch': 2.9}
-{'eval_loss': 0.500458836555481, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.7851, 'eval_samples_per_second': 8.403, 'eval_steps_per_second': 2.241, 'epoch': 3.0}
-{'loss': 0.482, 'learning_rate': 1.9724137931034483e-05, 'epoch': 3.87}
-{'eval_loss': 0.4647340178489685, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.7885, 'eval_samples_per_second': 8.387, 'eval_steps_per_second': 2.237, 'epoch': 4.0}
-{'loss': 0.4419, 'learning_rate': 1.931034482758621e-05, 'epoch': 4.84}
-{'eval_loss': 0.4576461613178253, 'eval_f1': 0.28571428571428575, 'eval_roc_auc': 0.575, 'eval_accuracy': 0.2, 'eval_runtime': 1.8176, 'eval_samples_per_second': 8.253, 'eval_steps_per_second': 2.201, 'epoch': 5.0}
-{'loss': 0.4117, 'learning_rate': 1.8896551724137934e-05, 'epoch': 5.81}
-{'eval_loss': 0.4342206120491028, 'eval_f1': 0.10526315789473685, 'eval_roc_auc': 0.5083333333333333, 'eval_accuracy': 0.06666666666666667, 'eval_runtime': 1.8272, 'eval_samples_per_second': 8.209, 'eval_steps_per_second': 2.189, 'epoch': 6.0}
-{'loss': 0.3793, 'learning_rate': 1.8482758620689657e-05, 'epoch': 6.77}
-{'eval_loss': 0.4738536477088928, 'eval_f1': 0.2, 'eval_roc_auc': 0.5416666666666666, 'eval_accuracy': 0.13333333333333333, 'eval_runtime': 1.8187, 'eval_samples_per_second': 8.248, 'eval_steps_per_second': 2.199, 'epoch': 7.0}
-{'loss': 0.4564, 'learning_rate': 1.806896551724138e-05, 'epoch': 7.74}
-{'eval_loss': 0.4987262189388275, 'eval_f1': 0.0, 'eval_roc_auc': 0.48333333333333334, 'eval_accuracy': 0.0, 'eval_runtime': 1.7846, 'eval_samples_per_second': 8.405, 'eval_steps_per_second': 2.241, 'epoch': 8.0}
-{'loss': 0.4784, 'learning_rate': 1.7655172413793105e-05, 'epoch': 8.71}
-{'eval_loss': 0.5156967639923096, 'eval_f1': 0.0, 'eval_roc_auc': 0.49166666666666664, 'eval_accuracy': 0.0, 'eval_runtime': 1.7694, 'eval_samples_per_second': 8.478, 'eval_steps_per_second': 2.261, 'epoch': 9.0}
-{'loss': 0.4925, 'learning_rate': 1.7241379310344828e-05, 'epoch': 9.68}
-{'eval_loss': 0.5013254880905151, 'eval_f1': 0.0, 'eval_roc_auc': 0.5, 'eval_accuracy': 0.0, 'eval_runtime': 1.746, 'eval_samples_per_second': 8.591, 'eval_steps_per_second': 2.291, 'epoch': 10.0}
-{'train_runtime': 477.2394, 'train_samples_per_second': 12.677, 'train_steps_per_second': 3.248, 'train_loss': 0.491503478634742, 'epoch': 10.0}
-

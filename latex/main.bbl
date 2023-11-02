@@ -1,0 +1,152 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Inproceedings
+\bibitem[{Sawhney et~al.(2022)Sawhney, Thakkar, Soun, Neerkaje, Sharma,
+  Guhathakurta, and Chava}]{sawhney-etal-2022-tweet}
+\bibinfo{author}{R.~Sawhney}, \bibinfo{author}{M.~Thakkar},
+  \bibinfo{author}{R.~Soun}, \bibinfo{author}{A.~Neerkaje},
+  \bibinfo{author}{V.~Sharma}, \bibinfo{author}{D.~Guhathakurta},
+  \bibinfo{author}{S.~Chava},
+\newblock \bibinfo{title}{Tweet based reach aware temporal attention network
+  for {NFT} valuation},
+\newblock in: \bibinfo{booktitle}{Findings of the Association for Computational
+  Linguistics: EMNLP 2022}, \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Abu Dhabi, United Arab Emirates},
+  \bibinfo{year}{2022}, pp. \bibinfo{pages}{6321--6332}. \URLprefix
+  \url{https://aclanthology.org/2022.findings-emnlp.471}.
+%Type = Inproceedings
+\bibitem[{Sawhney et~al.(2021)Sawhney, Wadhwa, Agarwal, and
+  Shah}]{sawhney-etal-2021-fast}
+\bibinfo{author}{R.~Sawhney}, \bibinfo{author}{A.~Wadhwa},
+  \bibinfo{author}{S.~Agarwal}, \bibinfo{author}{R.~R. Shah},
+\newblock \bibinfo{title}{{FAST}: Financial news and tweet based time aware
+  network for stock trading},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 16th Conference of the
+  European Chapter of the Association for Computational Linguistics: Main
+  Volume}, \bibinfo{publisher}{Association for Computational Linguistics},
+  \bibinfo{address}{Online}, \bibinfo{year}{2021}, pp.
+  \bibinfo{pages}{2164--2175}. \URLprefix
+  \url{https://aclanthology.org/2021.eacl-main.185}.
+  \DOIprefix\doi{10.18653/v1/2021.eacl-main.185}.
+%Type = Misc
+\bibitem[{Chinea-Rios et~al.(2022)Chinea-Rios, Müller, la~Peña~Sarracén,
+  Rangel, and Franco-Salvador}]{chinearios2022zero}
+\bibinfo{author}{M.~Chinea-Rios}, \bibinfo{author}{T.~Müller},
+  \bibinfo{author}{G.~L.~D. la~Peña~Sarracén}, \bibinfo{author}{F.~Rangel},
+  \bibinfo{author}{M.~Franco-Salvador}, \bibinfo{title}{Zero and few-shot
+  learning for author profiling}, \bibinfo{year}{2022}.
+  \href{http://arxiv.org/abs/2204.10543}{{\tt arXiv:2204.10543}}.
+%Type = Misc
+\bibitem[{Loureiro et~al.(2022)Loureiro, Barbieri, Neves, Anke, and
+  Camacho-Collados}]{loureiro2022timelms}
+\bibinfo{author}{D.~Loureiro}, \bibinfo{author}{F.~Barbieri},
+  \bibinfo{author}{L.~Neves}, \bibinfo{author}{L.~E. Anke},
+  \bibinfo{author}{J.~Camacho-Collados}, \bibinfo{title}{Timelms: Diachronic
+  language models from twitter}, \bibinfo{year}{2022}.
+  \href{http://arxiv.org/abs/2202.03829}{{\tt arXiv:2202.03829}}.
+%Type = Article
+\bibitem[{Liu et~al.(2019)Liu, Ott, Goyal, Du, Joshi, Chen, Levy, Lewis,
+  Zettlemoyer, and Stoyanov}]{liu2019roberta}
+\bibinfo{author}{Y.~Liu}, \bibinfo{author}{M.~Ott}, \bibinfo{author}{N.~Goyal},
+  \bibinfo{author}{J.~Du}, \bibinfo{author}{M.~Joshi},
+  \bibinfo{author}{D.~Chen}, \bibinfo{author}{O.~Levy},
+  \bibinfo{author}{M.~Lewis}, \bibinfo{author}{L.~Zettlemoyer},
+  \bibinfo{author}{V.~Stoyanov},
+\newblock \bibinfo{title}{Roberta: A robustly optimized bert pretraining
+  approach},
+\newblock \bibinfo{journal}{arXiv preprint arXiv:1907.11692}
+  (\bibinfo{year}{2019}).
+%Type = Misc
+\bibitem[{Clark et~al.(2020)Clark, Luong, Le, and Manning}]{clark2020electra}
+\bibinfo{author}{K.~Clark}, \bibinfo{author}{M.-T. Luong},
+  \bibinfo{author}{Q.~V. Le}, \bibinfo{author}{C.~D. Manning},
+  \bibinfo{title}{Electra: Pre-training text encoders as discriminators rather
+  than generators}, \bibinfo{year}{2020}.
+  \href{http://arxiv.org/abs/2003.10555}{{\tt arXiv:2003.10555}}.
+%Type = Inproceedings
+\bibitem[{Nguyen et~al.(2020)Nguyen, Vu, and Nguyen}]{bertweet}
+\bibinfo{author}{D.~Q. Nguyen}, \bibinfo{author}{T.~Vu}, \bibinfo{author}{A.~T.
+  Nguyen},
+\newblock \bibinfo{title}{{BERTweet: A pre-trained language model for English
+  Tweets}},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 2020 Conference on
+  Empirical Methods in Natural Language Processing: System Demonstrations},
+  \bibinfo{year}{2020}, pp. \bibinfo{pages}{9--14}.
+%Type = Inproceedings
+\bibitem[{Ushio et~al.(2022)Ushio, Barbieri, Sousa, Neves, and
+  Camacho-Collados}]{ushio-etal-2022-tweet}
+\bibinfo{author}{A.~Ushio}, \bibinfo{author}{F.~Barbieri},
+  \bibinfo{author}{V.~Sousa}, \bibinfo{author}{L.~Neves},
+  \bibinfo{author}{J.~Camacho-Collados},
+\newblock \bibinfo{title}{Named entity recognition in {T}witter: A dataset and
+  analysis on short-term temporal shifts},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 2nd Conference of the
+  Asia-Pacific Chapter of the Association for Computational Linguistics and the
+  12th International Joint Conference on Natural Language Processing (Volume 1:
+  Long Papers)}, \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Online only}, \bibinfo{year}{2022}, pp.
+  \bibinfo{pages}{309--319}. \URLprefix
+  \url{https://aclanthology.org/2022.aacl-main.25}.
+%Type = Inproceedings
+\bibitem[{Ushio and Camacho-Collados(2021)}]{ushio-camacho-collados-2021-ner}
+\bibinfo{author}{A.~Ushio}, \bibinfo{author}{J.~Camacho-Collados},
+\newblock \bibinfo{title}{{T}-{NER}: An all-round python library for
+  transformer-based named entity recognition},
+\newblock in: \bibinfo{booktitle}{Proceedings of the 16th Conference of the
+  European Chapter of the Association for Computational Linguistics: System
+  Demonstrations}, \bibinfo{publisher}{Association for Computational
+  Linguistics}, \bibinfo{address}{Online}, \bibinfo{year}{2021}, pp.
+  \bibinfo{pages}{53--62}. \URLprefix
+  \url{https://aclanthology.org/2021.eacl-demos.7}.
+  \DOIprefix\doi{10.18653/v1/2021.eacl-demos.7}.
+%Type = Misc
+\bibitem[{Zhang et~al.(2022)Zhang, Malkov, Florez, Park, McWilliams, Han, and
+  El-Kishky}]{zhang2022twhinbert}
+\bibinfo{author}{X.~Zhang}, \bibinfo{author}{Y.~Malkov},
+  \bibinfo{author}{O.~Florez}, \bibinfo{author}{S.~Park},
+  \bibinfo{author}{B.~McWilliams}, \bibinfo{author}{J.~Han},
+  \bibinfo{author}{A.~El-Kishky}, \bibinfo{title}{Twhin-bert: A
+  socially-enriched pre-trained language model for multilingual tweet
+  representations}, \bibinfo{year}{2022}.
+  \href{http://arxiv.org/abs/2209.07562}{{\tt arXiv:2209.07562}}.
+%Type = Misc
+\bibitem[{Sanh et~al.(2020)Sanh, Debut, Chaumond, and
+  Wolf}]{sanh2020distilbert}
+\bibinfo{author}{V.~Sanh}, \bibinfo{author}{L.~Debut},
+  \bibinfo{author}{J.~Chaumond}, \bibinfo{author}{T.~Wolf},
+  \bibinfo{title}{Distilbert, a distilled version of bert: smaller, faster,
+  cheaper and lighter}, \bibinfo{year}{2020}.
+  \href{http://arxiv.org/abs/1910.01108}{{\tt arXiv:1910.01108}}.
+%Type = Article
+\bibitem[{Hendrycks and Gimpel(2016)}]{Hendrycks2016GaussianEL}
+\bibinfo{author}{D.~Hendrycks}, \bibinfo{author}{K.~Gimpel},
+\newblock \bibinfo{title}{Gaussian error linear units (gelus)},
+\newblock \bibinfo{journal}{arXiv: Learning}  (\bibinfo{year}{2016}).
+%Type = Article
+\bibitem[{Michail et~al.(2023)Michail, Konstantinou, and
+  Clematide}]{michail2023uzh_clyp}
+\bibinfo{author}{A.~Michail}, \bibinfo{author}{S.~Konstantinou},
+  \bibinfo{author}{S.~Clematide},
+\newblock \bibinfo{title}{Uzh\_clyp at semeval-2023 task 9: Head-first
+  fine-tuning and chatgpt data generation for cross-lingual learning in tweet
+  intimacy prediction},
+\newblock \bibinfo{journal}{arXiv preprint arXiv:2303.01194}
+  (\bibinfo{year}{2023}).
+%Type = Misc
+\bibitem[{Kingma and Ba(2017)}]{kingma2017adam}
+\bibinfo{author}{D.~P. Kingma}, \bibinfo{author}{J.~Ba}, \bibinfo{title}{Adam:
+  A method for stochastic optimization}, \bibinfo{year}{2017}.
+  \href{http://arxiv.org/abs/1412.6980}{{\tt arXiv:1412.6980}}.
+
+\end{thebibliography}
